@@ -1,0 +1,83 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body, html {
+    height: 100%;
+  }
+  
+  .parallax {
+    background-image: url('nerdfudido.jpeg'); 
+    min-height: 100vh; /* Garante que o parallax cubra toda a altura da tela */
+    background-attachment: fixed; /* Efeito de Parallax */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço */
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255); /* Cor do texto */
+    font-size: 3rem; /* Tamanho da fonte */
+    z-index: -1; /* Faz o parallax ficar atrás dos outros elementos */
+    position: fixed; /* Fixa o parallax no fundo da página */
+    width: 100%; /* Ocupa toda a largura da página */
+}
+
+/* Garante que o corpo e o HTML ocupem 100% da altura da página */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Estilo para o conteúdo */
+.content {
+    padding: 20px;
+    background-color: transparent; /* Remove a cor de fundo */
+    min-height: 100vh; /* Garante que o conteúdo tenha no mínimo a altura da tela */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    z-index: 1; /* Garante que o conteúdo fique acima do parallax */
+    position: relative;
+}
+
+/* Container dos retângulos */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    gap: 50px;
+    background-color: transparent; /* Remove a cor de fundo */
+    min-height: 100vh; /* Garante que o container ocupe a altura total da tela */
+    z-index: 1; /* Garante que o container fique acima do parallax */
+    position: relative;
+}
+
+/* Estilo dos retângulos */
+.retangulo {
+    width: 400px;
+    height: 500px;
+    background-color: #3498db;
+    display: flex;       /* Usando flexbox para centralizar a imagem */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    overflow: hidden;    /* Esconde qualquer parte da imagem que ultrapasse o retângulo */
+    margin: 20px;       /* Espaçamento entre retângulos */
+}
+.retangulo img {
+  width: 100%;        /* Faz a imagem ocupar toda a largura do retângulo */
+  height: 100%;       /* Mantém a proporção da imagem */
+  object-fit: cover;  /* Faz com que a imagem preencha o retângulo, cortando se necessário */
+}
+
+
+
